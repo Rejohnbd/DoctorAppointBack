@@ -15,6 +15,7 @@ class DivisionAdmin(admin.ModelAdmin):
 class DistrictAdmin(admin.ModelAdmin):
     list_display = ('name', 'slug', 'bn_name',  'division_name', 'is_published_display', 'created_at')
     list_filter = ('is_published', 'division')
+    search_fields = ('name', 'slug', 'bn_name', 'division__name')
 
     @admin.display(description='Division Name')
     def division_name(self, obj):
@@ -28,6 +29,7 @@ class DistrictAdmin(admin.ModelAdmin):
 class ThanaAdmin(admin.ModelAdmin):
     list_display = ('name', 'slug', 'bn_name', 'division_name', 'district_name', 'is_published_display', 'created_at')
     list_filter = ('is_published', 'division', 'district')
+    search_fields = ('name', 'slug', 'bn_name', 'division__name', 'district__name')
 
     @admin.display(description='Division Name')
     def division_name(self, obj):
