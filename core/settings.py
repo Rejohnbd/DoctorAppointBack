@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'specialties',
     'location',
+    'hospital',
 ]
 
 MIDDLEWARE = [
