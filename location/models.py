@@ -5,7 +5,7 @@ class Division (models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
     bn_name = models.CharField(max_length=255)
-    is_published = models.BooleanField(default=True)
+    is_published = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -21,7 +21,7 @@ class District (models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
     bn_name = models.CharField(max_length=255)
-    is_published = models.BooleanField(default=True)
+    is_published = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -38,7 +38,7 @@ class Thana (models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
     bn_name = models.CharField(max_length=255)
-    is_published = models.BooleanField(default=True)
+    is_published = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
